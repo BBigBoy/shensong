@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circleprogress="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/activity_left_main_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/activity_right_main_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_main_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_gray"
+            android:orientation="horizontal"
+            android:paddingTop="1dp">
+
+            <LinearLayout
+                android:id="@+id/btn_real_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/btn_real_time_img"
+                    android:layout_width="32dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/btn_bottom_realtime_img" />
+
+                <TextView
+                    android:id="@+id/btn_real_time_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/real_time"
+                    android:textColor="@color/bottom_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_quality_list"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:id="@+id/btn_quality_list_img"
+                    android:layout_width="32dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_horizontal"
+                    android:enabled="false"
+                    android:src="@drawable/btn_bottom_list_img" />
+
+                <TextView
+                    android:id="@+id/btn_quality_list_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="@string/check"
+                    android:textColor="@color/bottom_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <me.fichardu.circleprogress.CircleProgress
+        android:id="@+id/progress"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        circleprogress:color1="@android:color/holo_red_light"
+        circleprogress:color2="@android:color/holo_green_light"
+        circleprogress:color3="@android:color/holo_blue_light" />
+
+    <SurfaceView
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+</RelativeLayout>

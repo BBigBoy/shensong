@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".TrailActivity">
+
+    <include
+        android:id="@+id/top_title"
+        layout="@layout/top_title" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_title" />
+
+    <Button
+        android:id="@+id/review_trail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/top_title"
+        android:layout_margin="20dp"
+        android:background="@drawable/apptheme_btn_default_holo_light"
+        android:padding="3dp"
+        android:text="轨迹回放"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+</RelativeLayout>
